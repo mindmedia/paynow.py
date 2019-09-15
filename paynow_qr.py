@@ -72,8 +72,8 @@ crc = pycrc.algorithms.Crc(width = 16, poly = 0x1021,
           reflect_out = False, xor_out = 0x0000)
 
 my_crc = crc.bit_by_bit_fast(data_for_crc)          # calculate the CRC, using the bit-by-bit-fast algorithm.
-crc_data = ('{:#04x}'.format(my_crc))
-crc_data_upper = crc_data[-4:].upper()
+crc_data_upper = ('{:04X}'.format(my_crc))
+#crc_data_upper = crc_data[-4:].upper()
 
 final_string = data_for_crc + crc_data_upper
 
